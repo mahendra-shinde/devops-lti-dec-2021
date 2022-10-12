@@ -37,9 +37,11 @@
 
 1. Goto `Post Build Actions` Tab and choose `Archive the artiacts` Task from drop down list
 
-	![Archive](./images/build-maven.png)
+	![Archive](./images/post-build1.png)
 
 1. Now, enter path `target/*.war` and click `Save` button.
+
+	![Archive](./images/post-build2.png)
 
 1. Now, start the first build by using button `Build Now`
 
