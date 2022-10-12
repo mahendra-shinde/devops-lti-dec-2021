@@ -1,10 +1,22 @@
-1. Create a new repository
+# Demo : Git Branching
 
+> Tool used: either Git Bash or Command prompt or Powershell 
+
+1. Create a new repository with working directory \repos\webproject
+
+   ```bash
    cd \repos
    git init webproject
    cd webproject
+   ```
 
-2. Create "index.html" with following contents
+1. Create "index.html" with following contents. 
+
+	> Use any text editor eg. Notepad or VSCode
+
+	> Make sure when you save the changes, file is saved in \repos\webproject directory only !
+
+	```html
 	<html>
 	<head>
 	<title>Home Page</title>
@@ -12,21 +24,37 @@
 	<body>
 	</body>
 	</html>
-3. COmmit the changes
+	```
+
+1. Commit the changes
+
+	```bash
 	git add .
 	git commit -m "Home Page"
+	```
 
-4.  List all branches
+1. List all branches
+
+	```bash
 	git branch
+	```
 
-5.  Create a new "css" branch
+1. Create a new "css" branch
+
+	```bash
 	git checkout -b css
+	```
 
-6.  Go back to master branch and create "content" branch
+1. Go back to master branch and create "content" branch
+
+	```bash
 	git checkout master
 	git checkoit -b content
+	```
 
-7.  Edit "index.html" and replace old contents with this one:
+1. Edit "index.html" and replace old contents with this one:
+
+	```html
 	<html>
 	<head>
 	<title>Home Page</title>
@@ -35,18 +63,31 @@
 	<h1>Hello World</h1>
 	</body>
 	</html>
+	```
 
-8.  Commit these changes to "content" branch
+1. Commit these changes to "content" branch
+
+	```bash
 	git add .
 	git commit -m "Heading added"
-9.  Switch to Master branch once again and find the differences between master and content
+	```
+
+1. Switch to Master branch once again and find the differences between master and content
+
+	```bash
 	git checkout master
 	git diff content master
+	```
 
-10.  Go back to "css" branch 
+1. Go back to "css" branch 
+
+	```bash
 	git checkout css
+	```
 	
-and replace content of  index.html with following
+1. and replace content of  index.html with following
+	
+	```html
 	<html>
 	<head>
 	<title>Home Page</title>
@@ -59,13 +100,23 @@ and replace content of  index.html with following
 	<body>
 	</body>
 	</html>
+	```
 
-
+	```bash
 	git add .
 	git commit -m "Style added"
+	```
+
 11.	Compare all branches
+
+	```bash
 	git diff master css content
+	```
+
 12.	Go back to master branch and merge css and content into master
+
+	```bash
 	git checkout master
 	git merge css
 	git merge content
+	```
